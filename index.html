@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don't Move</title>
+  </head>
+  <body>
+    <video width="1186" id="move">
+      <source src="resources/lionattack.mp4" type="video/mp4" />
+    </video>
+  </body>
+  <style>
+    body {
+      background-color: black;
+    }
+    #move {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script>
+    window.addEventListener("mousemove", trigger, { once: true });
+
+    function trigger() {
+      document.querySelector("#move").play();
+    }
+  </script>
+</html>
